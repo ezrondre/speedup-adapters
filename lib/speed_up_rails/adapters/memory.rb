@@ -14,9 +14,6 @@ module SpeedUpRails
       end
 
       def write(request_id, data)
-        ap request_id
-        ap data.contexts
-        ap data
         @requests[request_id] = data
       end
 
