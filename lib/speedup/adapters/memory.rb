@@ -1,6 +1,6 @@
 require 'speed_up_rails/adapters/base'
 
-module SpeedUpRails
+module Speedup
   module Adapters
     class Memory < Base
       attr_accessor :requests

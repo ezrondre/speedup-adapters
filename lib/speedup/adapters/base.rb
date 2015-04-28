@@ -1,4 +1,4 @@
-module SpeedUpRails
+module Speedup
   module Adapters
     class Base
       def initialize(options = {})

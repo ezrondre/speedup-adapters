@@ -1,4 +1,4 @@
-module SpeedUpRails
+module Speedup
   class RequestData < Hash
 
     def contexts

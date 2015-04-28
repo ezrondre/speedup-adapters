@@ -1,7 +1,7 @@
 require 'httparty'
 require 'speed_up_rails/adapters/memory'
 
-module SpeedUpRails
+module Speedup
   module Adapters
 
     class Server
@@ -10,7 +10,7 @@ module SpeedUpRails
       def initialize(options = {})
         @url = options[:url]
         @api_key = options[:api_key]
-        @memory = SpeedUpRails::Adapters::Memory.new
+        @memory = Speedup::Adapters::Memory.new
       end
 
       def get(request_id)

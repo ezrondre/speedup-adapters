@@ -1,12 +1,12 @@
 require 'speed_up_rails/adapters/memory'
 
-module SpeedUpRails
+module Speedup
   module Adapters
     class Influxdb < Base
       attr_accessor :requests
 
       def initialize(options = {})
-        @memory = SpeedUpRails::Adapters::Memory.new
+        @memory = Speedup::Adapters::Memory.new
         @client = InfluxDB::Client.new(options.delete(:database), options)
       end
 
