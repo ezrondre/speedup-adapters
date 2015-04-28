@@ -1,4 +1,4 @@
-require 'speed_up_rails/adapters/base'
+require 'speedup/adapters/base'
 
 module Speedup
   module Adapters

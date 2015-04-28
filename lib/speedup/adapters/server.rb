@@ -1,5 +1,5 @@
 require 'httparty'
-require 'speed_up_rails/adapters/memory'
+require 'speedup/adapters/memory'
 
 module Speedup
   module Adapters
