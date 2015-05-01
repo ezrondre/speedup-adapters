@@ -6,7 +6,7 @@ $:.push File.expand_path("../lib", __FILE__)
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "speedup-adapters"
-  s.version     = "0.0.5"
+  s.version     = "0.0.6"
   s.authors     = ["Ondřej Ezr"]
   s.email       = ["ezrondre@fit.cvut.cz"]
   s.homepage    = "https://github.com/ezrondre/speedup-rails"
@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.files = Dir["lib/**/*", "MIT-LICENSE", "README.rdoc"]
   # s.test_files = Dir["spec/**/*"]
 
-  s.add_dependency 'httparty', '~> 0.13.3'
+  s.add_dependency 'httpclient'
   s.add_dependency 'influxdb'
 
   s.add_development_dependency 'rspec', '~> 3.0'

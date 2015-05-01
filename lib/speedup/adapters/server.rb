@@ -1,11 +1,10 @@
-require 'httparty'
+require 'httpclient'
 require 'speedup/adapters/memory'
 
 module Speedup
   module Adapters
 
     class Server
-      include HTTParty
 
       def initialize(options = {})
         @url = options[:url]
@@ -22,9 +21,9 @@ module Speedup
 
         opts = {
           body: {request_id: request_id, contexts: data.contexts, data: data}.to_json,
-          headers: {"Content-Type" => "application/json", "X-SUR-API-Key" => @api_key},
+          header: {"Content-Type" => "application/json", "X-SUR-API-Key" => @api_key},
         }
-        self.class.post(@url + '/requests.json', opts )
+        HTTPClient.new.post_async(@url + '/requests.json', opts )
       end
     end
   end
