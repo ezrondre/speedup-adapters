@@ -2,13 +2,13 @@ require 'speedup/adapters/base'
 
 module Speedup
   module Adapters
-    class Memory < Base
+    class File < Base
       attr_accessor :requests
 
       def initialize(options = {})
         super
         @path = Rails.root.join('log', 'speedup')
-        unless File.exists?(@path)
+        unless ::File.exists?(@path)
           require 'fileutils'
           FileUtils.mkdir_p(@path)
         end
@@ -20,7 +20,7 @@ module Speedup
       end
 
       def write(request_id, data)
-        File.open(@path.join(request_id.to_s+'.yml'), 'w') {|f| f.write({contexts: data.contexts, data: data}.to_yaml) }
+        ::File.open(@path.join(request_id.to_s+'.yml'), 'w') {|f| f.write({contexts: data.contexts, data: data}.to_yaml) }
       end
 
       def reset
