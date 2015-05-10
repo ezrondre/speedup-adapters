@@ -12,7 +12,12 @@ module Speedup
       self[context] ||= []
     end
 
-    def load(contexts, data)
+    def load(contexts, data=nil)
+      unless data
+        raise 'load with one parametr expect a Hash to be a provided as a parametr' unless contexts.is_a?(Hash)
+        data = contexts
+        contexts = data.keys
+      end
       @contexts = contexts.map(&:to_sym)
       self.merge!(data.symbolize_keys)
     end

@@ -17,11 +17,12 @@ module Speedup
       def write(request_id, data)
         return unless data.any?
         data.contexts.each do |context|
-          [data[context]].flatten.each do |context_data|
+          data_points = ( data[context].is_a?(Array) ? data[context] : [data[context]] )
+          data_points.each do |context_data|
             context_data[:request_id] = request_id
             context_data[:time] = context_data[:time].to_f if context_data.has_key?(:time)
-            @client.write_point(context.to_s, context_data)
           end
+          @client.write_point(context.to_s, data_points)
         end
         @memory.write(request_id, data)
       end

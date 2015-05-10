@@ -6,7 +6,7 @@ $:.push File.expand_path("../lib", __FILE__)
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "speedup-adapters"
-  s.version     = "0.0.6"
+  s.version     = "0.0.8"
   s.authors     = ["Ondřej Ezr"]
   s.email       = ["ezrondre@fit.cvut.cz"]
   s.homepage    = "https://github.com/ezrondre/speedup-rails"
