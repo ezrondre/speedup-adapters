@@ -7,7 +7,7 @@ module Speedup
 
       def initialize(options = {})
         @memory = Speedup::Adapters::Memory.new
-        @client = InfluxDB::Client.new(options.delete(:database), options)
+        @client = ::InfluxDB::Client.new(options.delete(:database), options)
       end
 
       def get(request_id)
