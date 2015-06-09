@@ -15,6 +15,6 @@ See MIT-LICENSE for license information.
 
 ## Development
 
-Code is located at https://github.com/ezrondre/speedup-rails
+Code is located at https://github.com/ezrondre/speedup-adapters
 
 Any contribution, or feedback will be appreciated.
