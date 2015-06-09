@@ -21,5 +21,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'influxdb'
 
   s.add_development_dependency 'rspec', '~> 3.0'
+  s.add_development_dependency 'webmock'
 
 end
