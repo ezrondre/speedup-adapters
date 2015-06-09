@@ -6,7 +6,7 @@
 SpeedUpRails is a development helper for a adapter application.
 This gem is only a helper for this project.
 Abstracts storing information.
-The main project can be found at [speedup][speedup].
+The main project can be found here: [speedup-rails][speedup].
 
 [speedup]: https://github.com/ezrondre/speedup-rails
 
