@@ -5,6 +5,12 @@ WebMock.disable_net_connect!(allow_localhost: true)
 require 'active_support'
 require 'active_support/core_ext'
 
+# Note: SimpleCov must be loaded before any of our code is required.
+require 'simplecov'
+SimpleCov.start do
+  add_filter '/spec/'
+end
+
 RSpec.configure do |config|
 
   config.expect_with :rspec do |expectations|
